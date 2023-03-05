@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import foodData from "./foodlist.json";
 import {isMobile} from 'react-device-detect'
+import { useMediaQuery } from 'react-responsive'
 function Header(props){
  return<>
  <div id="Header" onClick={(event)=>{
@@ -140,7 +141,13 @@ src="https://forecast.io/embed/#lat=37.5266&lon=127.0403&name=Busan">
 
 function App() {
   
-  
+  if(useMediaQuery({ query : "(max-width:1024px)"})){
+    $('.SideMenu').css({'width':'70px'});
+    $('#Home').css({'font-size':'25px','margin-left':'5px'});
+    $('.Photos').css({'width':'50px','height':'50px'});
+    $('.Icon').css({'width':'40px','height':'40px'});
+    $('#Banner').css({'height':'190px','width':'300px'});
+  }
   
   let main,MAIN,POST,id,article = null;
   const [mode,setMode] = useState('MAIN');
@@ -372,13 +379,7 @@ else if($('#Dark').text() === "Dark"){
   $('#SidePhoto').css({'background-color':'rgb(236, 169, 88, 0.5)'});
   $('#BannerFrame').css({'background-color':'rgb(250, 235, 215, 0.8)'});
 }
-if(isMobile){
-  $('.SideMenu').css({'width':'70px'});
-  $('#Home').css({'font-size':'25px'});
-  $('.Photos').css({'width':'50px','height':'50px'});
-  $('.Icon').css({'width':'40px','height':'40px'});
-  $('#Banner').css({'height':'190px','width':'300px'});
-}
+
 });
 
   return (
