@@ -143,10 +143,11 @@ function App() {
   
   if(useMediaQuery({ query : "(max-width:1024px)"})){
     $('.SideMenu').css({'width':'70px'});
-    $('#Home').css({'font-size':'25px','margin-left':'5px'});
+    $('#Home').css({'font-size':'20px','margin-left':'5px','width':'35px'});
     $('.Photos').css({'width':'50px','height':'50px'});
     $('.Icon').css({'width':'40px','height':'40px'});
     $('#Banner').css({'height':'190px','width':'300px'});
+    $('#Bottom #Header').css({'display':'none'});
   }
   
   let main,MAIN,POST,id,article = null;
