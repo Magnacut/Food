@@ -377,6 +377,7 @@ if(isMobile){
   $('#Home').css({'font-size':'25px'});
   $('.Photos').css({'width':'50px','height':'50px'});
   $('.Icon').css({'width':'40px','height':'40px'});
+  $('#Banner').css({'height':'190px','width':'300px'});
 }
 });
 
