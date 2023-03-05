@@ -1,0 +1,243 @@
+#Header{
+  display : flex;
+  align-items : center; 
+  width:auto;
+  height:72px;
+  background-color: rgb(255, 255, 220);
+}
+#Dark{
+  position: relative;
+  left: 100px;
+  display : flex;
+  align-items : center; 
+  justify-content : center;
+  height:44px;
+  width:44px;
+  background-color: antiquewhite;
+}
+#Dark:hover{
+  opacity: 0.1;
+}
+#Home{
+  margin-left: 15%;
+  margin-right: 10px;
+  font-size: 50px;
+  text-align: center;
+  height:60px;
+  width:150px;
+}
+#Home:hover{
+  background-color:rgb(255, 255, 240);
+}
+#Input{
+  border:0;
+  border-bottom:2px solid rgb(243, 243, 148);
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+  width:200px;
+  height:40px;
+  background-color: rgb(255, 255, 174);
+  color: black;
+}
+input:focus {outline:none;}
+input::placeholder {
+  color: rgb(218, 218, 218);
+  font-style: italic;
+}
+
+
+#Submit{
+  cursor: pointer;
+  border:0;
+  width:40px;
+  height:44px;
+  border-radius: 0 10% 10% 0;
+  background-color: rgb(243, 243, 148);
+}
+
+#Main{
+  height:auto;
+  width: auto;
+  display : flex;
+  justify-content : center;
+}
+#BannerFrame{
+  height:420px;
+  width: 100%;
+  display : flex;
+  align-items : center; 
+  justify-content : center;
+  background-color: rgb(250, 235, 215, 0.8);
+  margin-bottom: 0px;
+  margin-bottom: 10px;
+}
+#Banner{
+  width:600px;
+  height: 380px;
+  background-color:rgb(255, 255, 240);
+}
+#Banner img{
+  width:100%;
+  height:100%;
+}
+#MainPhoto{
+  width: 100%;
+  height:720px;
+ margin-left: 0px;
+  z-index: 2;
+  display : flex;
+  align-items : center; 
+  justify-content : center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.Photos{
+  display : flex;
+  align-items : center; 
+  justify-content : center;
+  width:140px;
+  height:140px;
+  margin:2px;
+  border:0.3px solid rgb(250, 227, 199);
+  border-radius: 10%;
+ 
+  cursor: pointer;
+  z-index: 6;
+}
+.Photos:hover{
+  background-color: rgb(250, 234, 214);
+}
+.Icon{
+  width:70px;
+  height:70px;
+}
+.Photos:hover > .Icon{
+  width:80px;
+  height:80px;
+  filter: grayscale(50%);
+}
+
+#SidePhoto{
+  padding-top: 50px;
+  height:710px;
+  z-index: 10;
+  background-color:rgb(236, 169, 88, 0.5);
+ 
+  
+}
+.SideMenu{
+  cursor: pointer;
+  overflow:hidden;
+  margin:10px;
+  height: 30px;
+  width: 200px;
+  
+  
+}
+.Line{
+  margin-top:8px;
+  position:relative;
+  width:100%;
+  height:5px;
+  background-color:rgb(236, 169, 88, 0.8);
+  transition-duration:0.2s; 
+  right:100%;
+}
+#Up{
+  position: fixed;
+  right:30px;
+  bottom:10px;
+  width:40px;
+  height:40px;
+  display : flex;
+  align-items : center; 
+  justify-content : center;
+  font-size: 30px;
+  font-weight: bolder;
+  background-color: rgb(236, 169, 88, 0.5);
+  color:white
+}
+#Bottom{
+  height:68px;
+  width: auto;
+  background-color: rgb(255, 255, 220);
+}
+
+.Home:hover{
+  background-color:rgb(255, 255, 240);
+}
+body{
+  background-color: rgb(255, 255, 240);
+}
+
+.Circles1{
+  position: absolute;
+  width:auto;
+  left:0%;
+  top:10%;
+ 
+}
+.Circles2{
+  position: absolute;
+  width:auto;
+  left: 5%;
+  top:24%;
+ 
+}
+.Circles3{
+  position: absolute;
+  width:auto;
+  left:0%;
+  top:38%;
+ 
+}
+.Circles4{
+  position: absolute;
+  width:auto;
+  left:5%;
+  top:52%;
+ 
+}
+.Circles5{
+  position: absolute;
+  width:auto;
+  left:0%;
+  top:66%;
+ 
+}
+.Circles6{
+  position: absolute;
+  width:auto;
+  left:5%;
+  top:80%;
+}
+.Circle{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 1;
+  z-index: 5;
+}
+nav{
+  width:86%;
+}
+#List{
+  height:200px;
+  margin-left:30px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+  background-color:rgb(250, 234, 214);
+  padding: 5px;
+}
+.Title{
+  font-size: 20px;
+  font-weight:bolder;
+}
+.Body{
+  font-weight:bold;
+}
+
