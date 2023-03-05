@@ -140,9 +140,7 @@ src="https://forecast.io/embed/#lat=37.5266&lon=127.0403&name=Busan">
 
 function App() {
   
-  if(isMobile){
-    $('.SideMenu').css({'width':'100px'});
-  }
+  
   
   let main,MAIN,POST,id,article = null;
   const [mode,setMode] = useState('MAIN');
@@ -156,7 +154,7 @@ if(mode === 'MAIN'){
   <div id="Main">
  <div id="MainPhoto">
   <div id="BannerFrame">
-    <div id="Banner"><img src="74A50611-4B62-4C3F-9181-A168F841ABB8_1_105_c.jpeg"></img></div>
+    <div id="Banner"><img src="FCE032C6-1DE2-4AF1-B9B6-2A6A99072384_1_105_c.jpeg"></img></div>
   </div>
    
   <div className="Photos" onClick={(event)=>{
@@ -373,6 +371,12 @@ else if($('#Dark').text() === "Dark"){
   $('li').css({'background-color':'rgb(250, 234, 214)'});
   $('#SidePhoto').css({'background-color':'rgb(236, 169, 88, 0.5)'});
   $('#BannerFrame').css({'background-color':'rgb(250, 235, 215, 0.8)'});
+}
+if(isMobile){
+  $('.SideMenu').css({'width':'70px'});
+  $('#Home').css({'font-size':'25px'});
+  $('.Photos').css({'width':'50px','height':'50px'});
+  $('.Icon').css({'width':'40px','height':'40px'});
 }
 });
 
