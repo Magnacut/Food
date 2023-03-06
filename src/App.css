@@ -4,15 +4,19 @@
   width:auto;
   height:72px;
   background-color: rgb(255, 255, 220);
+  border: 1px solid;
+ 
 }
 #Dark{
   position: relative;
+  left:65%;
   display : flex;
   align-items : center; 
   justify-content : center;
   height:44px;
   width:44px;
-  background-color: antiquewhite;
+  background-color: transparent;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 #Dark:hover{
   opacity: 0.1;
@@ -25,7 +29,8 @@
   margin-right: 10px;
   font-size: 50px;
   height:60px;
-  width:150px;
+  width:170px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 #Home:hover{
   background-color:rgb(255, 255, 240);
@@ -66,12 +71,15 @@ input::placeholder {
 #BannerFrame{
   height:420px;
   width: 100%;
+  border: 1px solid;
   display : flex;
   align-items : center; 
   justify-content : center;
   background-color: rgb(250, 235, 215, 0.8);
   margin-bottom: 0px;
   margin-bottom: 10px;
+  border-bottom: 2px solid;
+  border-right: 0px;
 }
 #Banner{
   width:600px;
@@ -84,7 +92,7 @@ input::placeholder {
 }
 #MainPhoto{
   width: 100%;
-  height:720px;
+  height:722px;
  margin-left: 0px;
   z-index: 2;
   display : flex;
@@ -92,6 +100,7 @@ input::placeholder {
   justify-content : center;
   flex-wrap: wrap;
   overflow: hidden;
+  
 }
 
 .Photos{
@@ -125,7 +134,9 @@ input::placeholder {
   height:710px;
   z-index: 10;
   background-color:rgb(236, 169, 88, 0.5);
- 
+  border: 1px solid;
+  border-left: 2px solid;
+  
   
 }
 .SideMenu{
@@ -134,7 +145,7 @@ input::placeholder {
   margin:10px;
   height: 30px;
   width: 70px;
-  
+  font-weight: bold;
   
 }
 .Line{
@@ -165,7 +176,90 @@ input::placeholder {
   width: auto;
   background-color: rgb(255, 255, 220);
 }
+#Bottom #Header{
+  padding-top: 10px;
+  height:72px;
+  align-items: center;
+  border-top: 2px solid;
+}
+#ExplainSite{
+  height: 800px;
+  text-align: center;
+}
+.DarkPic{
+  float: left;
+  width:500px;
+  height: 300px;
+  margin: 100px;
+}
+.DarkPic img{
+width: 100%;
+height: 100%;
+}
+#Blog{
+  position: relative;
+  left: 55%;
+  width:30px;
+  height: 30px;
+  margin-right: 10px;
+}
+#Blog img{
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+#Insta{
+  position: relative;
+  left: 55%;
+  width:30px;
+  height: 30px;
+  margin-right: 10px;
+  z-index: 100;
+}
+#Link{
+display : flex;
+align-items : center; 
 
+width: 100%;
+height: 50px;
+border: 1px solid;
+}
+#Guide{
+  display : flex;
+  align-items : center; 
+  justify-content : center;
+  margin-left: 20px;
+  width:80px;
+  height: 30px;
+}
+#Guide:hover{
+  background-color:rgb(255, 255, 220);
+}
+#Explain{
+display : flex;
+align-items : center; 
+justify-content : center;
+width: 100%;
+height: 150px;
+border: 1px solid;
+font-weight: bold;
+}
+#Insta img{
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+#Git{
+  position: relative;
+  left: 55%;
+  width:30px;
+  height: 30px;
+  margin-right: 10px;
+}
+#Git img{
+  width: 100%;
+  height: 100%;
+}
 .Home:hover{
   background-color:rgb(255, 255, 240);
 }
@@ -224,7 +318,7 @@ body{
   z-index: 5;
 }
 nav{
-  width:86%;
+  width:95%;
 }
 #List{
   height:200px;

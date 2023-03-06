@@ -11,9 +11,9 @@ function Header(props){
   event.preventDefault();
   props.home();
 }}>
-<div id="Home">음식</div>
-<input id="Input" type="text" name="title" placeholder="  음식을 입력하세요."></input>
-<input id="Submit" type="button"></input>
+<div id="Home">Donteat</div>
+{/*<input id="Input" type="text" name="title" placeholder="  음식을 입력하세요."></input>
+<input id="Submit" type="button"></input>*/}
 <div id="Dark" onClick={event=>{
   event.preventDefault();
   props.dark();
@@ -26,20 +26,38 @@ function Main(){
  }
  function Bottom(props){
   return<div id="Bottom">
- <div id="Blog"></div>
- <div id="Insta"></div>
- <div id="Header" onClick={event=>{
+ <div id="Header">
+<div id="Home" onClick={event=>{
   event.preventDefault();
   props.home();
- }}>
-<div id="Home">음식</div>
-<input id="Input" type="text" name="title" placeholder="  음식을 입력하세요."></input>
-<input id="Submit" type="button"></input>
+ }}>Donteat</div>
+<div id="Blog"><a href="https://velog.io/@magnacut/" target="_blank">
+    <img src="https://pbs.twimg.com/profile_images/1228368893321736193/Ov0og7E8_400x400.jpg"></img>
+   </a></div>
+ <div id="Git"><a href="https://github.com/Magnacut" target="_blank">
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"></img>
+   </a></div>
+  <div id="Insta"><a href="https://www.instagram.com/me_or_no/" target="_blank">
+    <img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png"></img>
+   </a></div>
+
+{/*<input id="Input" type="text" name="title" placeholder="  음식을 입력하세요."></input>
+<input id="Submit" type="button"></input>*/}
   </div>
+  <div id="Link">
+    <div id="Guide" onClick={(event)=>{
+      event.preventDefault();
+      props.guide();
+    }}>Site-Guide</div>
+  </div>
+<div id="Explain">
+COPYRIGHT © 2023 SEUNGMIN LEE ALL RIGHTS RESERVED.
+</div>
    </div>
  }
 
  function Nav(props){
+  
   const lis = []
   for(let i=0; i<props.topics.length; i++){
     let t = props.topics[i];
@@ -141,7 +159,8 @@ src="https://forecast.io/embed/#lat=37.5266&lon=127.0403&name=Busan">
 
 function App() {
   
-  if(useMediaQuery({ query : "(max-width:1024px)"})){
+  
+  if(isMobile){
     $('.SideMenu').css({'width':'70px'});
     $('#Home').css({'font-size':'20px','margin-left':'5px','width':'35px'});
     $('.Photos').css({'width':'50px','height':'50px'});
@@ -155,7 +174,9 @@ function App() {
   const [topics, setTopics] = useState(foodData)
   const [scroll, setScroll] = useState(0);
   const [category, setCategory] = useState('all');
+  const [mobile, setMobile] = useState(0);
 if(mode === 'MAIN'){
+  
   const length=topics.length-1;
   main =
   <>
@@ -247,29 +268,32 @@ if(mode === 'MAIN'){
   }}><img class="Icon" src={topics[length-15].photo}></img></div>
  </div>
  <div id="SidePhoto">
-  <div className="SideMenu Menu1" onClick={(event)=>{
+ <div className="SideMenu Menu1" onClick={(event)=>{
+    event.preventDefault();
+    setMode('POST');
+    setScroll(0);}}>전체보기
+  <div className="Line Line1"></div></div>
+  <div className="SideMenu Menu2" onClick={(event)=>{
     event.preventDefault();
     setCategory('veg');
     setMode('POST');
   }}>과일, 야채
-  <div className="Line Line1"></div></div>
-  <div className="SideMenu Menu2" onClick={(event)=>{
+  <div className="Line Line2"></div></div>
+  <div className="SideMenu Menu3" onClick={(event)=>{
     event.preventDefault();
     setCategory('meat');
     setMode('POST');
   }}>고기
-  <div className="Line Line2"></div></div>
-  <div className="SideMenu Menu3" onClick={(event)=>{
+  <div className="Line Line3"></div></div>
+  <div className="SideMenu Menu4" onClick={(event)=>{
     event.preventDefault();
     setCategory('etc');
     setMode('POST');
   }}>기타
-  <div className="Line Line3"></div></div>
-  <div className="SideMenu Menu4">dd
   <div className="Line Line4"></div></div>
-  <div className="SideMenu Menu5">dd
+  <div className="SideMenu Menu5">
   <div className="Line Line5"></div></div>
-  <div className="SideMenu Menu6">dd
+  <div className="SideMenu Menu6">
   <div className="Line Line6"></div></div>
  </div>
    </div>
@@ -305,30 +329,32 @@ main =
   <div id="Main">
   <Nav topics={lis}></Nav>
   <Circle></Circle>
- <div id="SidePhoto">
+  <div id="SidePhoto">
  <div className="SideMenu Menu1" onClick={(event)=>{
+    event.preventDefault();
+    setMode('POST');}}>전체보기
+  <div className="Line Line1"></div></div>
+  <div className="SideMenu Menu2" onClick={(event)=>{
     event.preventDefault();
     setCategory('veg');
     setMode('POST');
   }}>과일, 야채
-  <div className="Line Line1"></div></div>
-  <div className="SideMenu Menu2" onClick={(event)=>{
+  <div className="Line Line2"></div></div>
+  <div className="SideMenu Menu3" onClick={(event)=>{
     event.preventDefault();
     setCategory('meat');
     setMode('POST');
   }}>고기
-  <div className="Line Line2"></div></div>
-  <div className="SideMenu Menu3" onClick={(event)=>{
+  <div className="Line Line3"></div></div>
+  <div className="SideMenu Menu4" onClick={(event)=>{
     event.preventDefault();
     setCategory('etc');
     setMode('POST');
   }}>기타
-  <div className="Line Line3"></div></div>
-  <div className="SideMenu Menu4">dd
   <div className="Line Line4"></div></div>
-  <div className="SideMenu Menu5">dd
+  <div className="SideMenu Menu5">
   <div className="Line Line5"></div></div>
-  <div className="SideMenu Menu6">dd
+  <div className="SideMenu Menu6">
   <div className="Line Line6"></div></div>
  </div>
  <div id="Up" onClick={(event)=>{
@@ -338,6 +364,19 @@ main =
    </div>
 </>
 setTimeout(function() {window.scrollTo( 0, scroll*220 )}, 100);
+}
+if(mode === 'GUIDE'){
+  main =
+  <div id="ExplainSite"><br></br>
+    <h2>리액트를 이용하여 같이 먹으면 궁합이 좋지 않은 음식을 찾을 수 있는 사이트를 만들어 보았습니다. </h2><br></br>
+    <p>JSON 구조의 배열을 통해 각각의 객체들을 저장하고 정순, 역순 등의 방식으로 불러와 사용하였고 특정 식품을 필터링하는 기능을 구현해 보았습니다.</p>
+    <p>또한 다크모드를 구현하여 눈에 좀 더 편하고 oled 패널의 수명과 배터리를 아끼는데 도움이 되도록 하였습니다.</p>
+    <p>hover transition 등을 이용한 다양한 이펙트를 만들어 정적 웹 사이트임에도 심심하지 않은 UI를 만들려고 노력했습니다.</p>
+    <p>스크롤 이동 기능을 사용하여 특정 객체를 클릭시 해당 위치로 이동하거나 최상단으로 스크롤하는 기능을 구현했습니다.</p>
+    <p>반응형 웹을 통한 모바일 UI구축이과 검색 기능 등을 추가로 넣을 필요성을 느끼고 있고 차후에 추가적으로 설계할 생각입니다.</p>
+    <div className='DarkPic'><img src="light.png"></img></div>
+    <div className='DarkPic'><img src="dark.png"></img></div>
+  </div>
 }
   useEffect(() => {
     for(let j=1; j<7; j++){
@@ -382,8 +421,8 @@ else if($('#Dark').text() === "Dark"){
 }
 
 });
-
   return (
+    
     <>
     <Header home={()=>{
       setMode('MAIN');
@@ -419,6 +458,9 @@ else if($('#Dark').text() === "Dark"){
     <Bottom home={()=>{
       setMode('MAIN');
       setCategory('all');
+    }}
+    guide={()=>{
+      setMode('GUIDE');
     }}></Bottom>
     </>
 
